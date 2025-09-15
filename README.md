@@ -55,4 +55,9 @@ FROM `exam_student`
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
+SELECT COUNT(*) 
+FROM `degrees`
+GROUP BY `department_id` 
+
+
 
