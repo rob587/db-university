@@ -47,6 +47,10 @@ ORDER BY edificio
 
 3. Calcolare la media dei voti di ogni appello d'esame
 
+SELECT AVG(vote) AS `media_voti`
+FROM `exam_student`
+
+
 
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
