@@ -114,5 +114,6 @@ FROM departments
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
 
-
-
+SELECT Count(*) as 'senza_numero' 
+FROM teachers
+where phone is null
