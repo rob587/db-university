@@ -38,6 +38,11 @@ ORDER BY `anno`
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
+SELECT LEFT(`office_address`, 1) AS edificio, COUNT(*)
+FROM `teachers`
+GROUP BY edificio
+ORDER BY edificio
+
 
 
 3. Calcolare la media dei voti di ogni appello d'esame
