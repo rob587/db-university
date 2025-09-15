@@ -78,7 +78,7 @@ WHERE cfu > 10
 
 SELECT *
 FROM students
-where year(date_of_birth) >= 1995
+where year (curdate()) - year(date_of_birth) > 30
 
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
