@@ -25,3 +25,25 @@ Dopo aver testato le vostre query con MySQL Workbench, riportatele in un file tx
 
 Consigli
 Se vi bloccate su una query, non perdeteci troppo tempo, andate avanti alle successive. Per alcune sarà necessario fare un minimo di ricerca nella documentazione
+
+
+1. Contare quanti iscritti ci sono stati ogni anno
+
+SELECT `enrolment_date` AS `anno`, COUNT(*) AS `numero_iscritti`
+FROM `students`
+GROUP BY `enrolment_date`
+ORDER BY `anno`
+
+
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+
+
+3. Calcolare la media dei voti di ogni appello d'esame
+
+
+
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+
