@@ -178,13 +178,13 @@ ON courses.id = teachers.id
 6. Selezionare tutti i docenti che insegnano nel Dipartimento di
 Matematica (54)
 
-SELECT *
+SELECT DISTINCT teachers.name, teachers.surname, teachers.phone, teachers.office_address, teachers.office_number, teachers.email
 FROM teachers
-JOIN course_teacher ON teachers.id = course_teacher.teacher_id
-JOIN courses ON course_teacher.course_id = courses.id
-JOIN degrees ON courses.degree_id = degrees.id
-JOIN departments ON degrees.department_id = departments.id
-WHERE departments.id = 'Dipartimento di Matematica'
+JOIN course_teacher ON course_teacher.teacher_id = teachers.id
+JOIN courses ON course.id = course_teacher.course_id
+JOIN degrees ON degrees.id = courses.degree_id
+JOIN departments ON departments.id = degrees.department_id
+WHERE departments.name = 'Dipartimento di Matematica'
 
 
 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti
