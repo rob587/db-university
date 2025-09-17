@@ -157,6 +157,13 @@ WHERE teachers.id = 44
 sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
 nome
 
+ SELECT students.name, students.surname, students.enrolment_date, students.registration_number, degrees.name AS degree_name, departments.name AS department_name
+ FROM students
+JOIN degrees
+ON degrees.id = students.degree_id
+JOIN departments
+ON departments.id = degrees.department_id
+ORDER BY students.surname, students.name
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
